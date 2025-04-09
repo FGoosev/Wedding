@@ -10,35 +10,84 @@
     body {
       font-family: 'Playfair Display', serif;
     }
+
+    .stroke {
+      width: 140px;
+      height: 80px;
+      border-radius: 9999px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .stroke:hover {
+      transform: scale(1.1) rotate(3deg);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .glitter {
+      background: repeating-linear-gradient(
+        45deg,
+        #f8f4f0,
+        #f8f4f0 10px,
+        #e0d4cc 10px,
+        #e0d4cc 20px
+      );
+      animation: shimmer 2s infinite linear;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .object-cover {
+      object-fit: cover;
+    }
+
+    .transform {
+      transform: translate(0, 0);
+    }
+
+    .-translate-y-8 {
+      transform: translateY(-32px);
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
   </style>
 </head>
 <body class="bg-[#f8faf8] text-green-900">
 
-  <section class="text-center py-16">
+  <section class="text-center py-16 bg-cover bg-center">
     <h1 class="text-2xl md:text-3xl text-gray-600 mb-4">— Александр & Светлана —</h1>
     <div class="relative inline-block mt-4">
-      <div class="bg-white shadow-md p-2 inline-block transform rotate-[-3deg]">
-        <img src="/mnt/data/image.png" alt="Мы женимся" class="w-full max-w-md rounded-md">
+      <div class="relative z-10 bg-white shadow-md p-4 inline-block transform rotate-[-3deg] rounded-md">
         <p class="text-xl mt-2 italic">Мы женимся!</p>
       </div>
     </div>
   </section>
 
-  <section class="bg-[#f0f5f0] py-16 px-4">
+  <section class="bg-[#f0f5f0] py-16 px-4" style="background-image: url('C:\Users\fgoos\Wedding\images/your-image-2.jpg'); background-size: cover;">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-semibold mb-10">— Наша история —</h2>
       <div class="grid md:grid-cols-2 gap-10 items-start">
         <div class="flex flex-col items-center">
           <div class="bg-white shadow p-2 transform rotate-[-5deg] mb-4">
-            <img src="/mnt/data/image.png" alt="Фото Александра" class="w-48 h-60 object-cover rounded-md">
+            <img src="C:\Users\fgoos\Wedding\images\photo_2025-04-09_22-00-55.jpg" alt="Фото Александра" class="w-48 h-60 object-cover rounded-md">
             <p class="text-lg mt-2">Александр</p>
           </div>
-          <p class="text-base px-4">Любит горы, кофе по утрам и улыбку Светлана. Верит в судьбу и силу настоящей любви.</p>
+          <p class="text-base px-4">Любит горы, кофе по утрам и улыбку Светланы. Верит в судьбу и силу настоящей любви.</p>
         </div>
 
         <div class="flex flex-col items-center">
           <div class="bg-white shadow p-2 transform rotate-[3deg] mb-4">
-            <img src="/mnt/data/image.png" alt="Фото Светланы" class="w-48 h-60 object-cover rounded-md">
+            <img src="C:\Users\fgoos\Wedding\images\photo_2025-04-09_22-01-57.jpg" alt="Фото Светланы" class="w-48 h-60 object-cover rounded-md">
             <p class="text-lg mt-2">Светлана</p>
           </div>
           <p class="text-base px-4">Обожает книги, вечерние прогулки и момент, когда Александр берёт её за руку.</p>
@@ -46,7 +95,21 @@
       </div>
     </div>
   </section>
-  
+
+  <section class="py-16 px-4" style="background-image: url('C:\Users\fgoos\Wedding\images/your-image-3.jpg'); background-size: cover;">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">— Дресс-код —</h2>
+      <p class="text-lg mb-10">Будем очень благодарны, если вы поддержите цветовую гамму нашего праздника ✨</p>
+      <div class="grid grid-cols-2 gap-6 justify-center items-center max-w-xl mx-auto">
+        <div class="stroke" style="background: linear-gradient(135deg, rgba(180,178,175,1) 0%, rgba(100,100,100,0.2) 100%);"></div>
+        <div class="stroke" style="background: linear-gradient(135deg, rgba(247,246,239,1) 0%, rgba(180,180,180,0.2) 100%);"></div>
+        <div class="stroke ml-6" style="background: linear-gradient(135deg, rgba(191,197,157,1) 0%, rgba(120,140,90,0.2) 100%);"></div>
+        <div class="stroke ml-6" style="background: linear-gradient(135deg, rgba(224,207,177,1) 0%, rgba(160,130,100,0.2) 100%);"></div>
+        <div class="stroke ml-6" style="background: linear-gradient(135deg, rgba(255,203,219,1) 0%, rgba(160,130,100,0.2) 100%);"></div>
+        <div class="stroke ml-6" style="background: linear-gradient(135deg, rgba(247,143,167,1) 0%, rgba(160,130,100,0.2) 100%);"></div>
+      </div>
+    </div>
+  </section>
 
   <section class="bg-white py-16 text-center">
     <h2 class="text-3xl font-semibold mb-6">— До свадьбы осталось —</h2>
