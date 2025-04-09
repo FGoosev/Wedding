@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свадебное приглашение</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-[#f8faf8] text-green-900">
+
+  <section class="text-center py-16">
+    <h1 class="text-2xl md:text-3xl text-gray-600 mb-4">— Александр & Светлана —</h1>
+    <div class="relative inline-block mt-4">
+      <div class="bg-white shadow-md p-2 inline-block transform rotate-[-3deg]">
+        <img src="/mnt/data/image.png" alt="Мы женимся" class="w-full max-w-md rounded-md">
+        <p class="text-xl mt-2 italic">Мы женимся!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#f0f5f0] py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-10">— Наша история —</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="flex flex-col items-center">
+          <div class="bg-white shadow p-2 transform rotate-[-5deg] mb-4">
+            <img src="/mnt/data/image.png" alt="Фото Александра" class="w-48 h-60 object-cover rounded-md">
+            <p class="text-lg mt-2">Александр</p>
+          </div>
+          <p class="text-base px-4">Любит горы, кофе по утрам и улыбку Светлана. Верит в судьбу и силу настоящей любви.</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="bg-white shadow p-2 transform rotate-[3deg] mb-4">
+            <img src="/mnt/data/image.png" alt="Фото Светланы" class="w-48 h-60 object-cover rounded-md">
+            <p class="text-lg mt-2">Светлана</p>
+          </div>
+          <p class="text-base px-4">Обожает книги, вечерние прогулки и момент, когда Александр берёт её за руку.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="bg-white py-16 text-center">
+    <h2 class="text-3xl font-semibold mb-6">— До свадьбы осталось —</h2>
+    <div id="countdown" class="text-4xl font-bold text-green-700"></div>
+  </section>
+
+  <section class="bg-green-50 py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-6">— Где и когда —</h2>
+      <p class="text-xl mb-4">30 августа 2025 года, 16:00</p>
+      <p class="text-md text-green-800 mb-6">База отдыха "Резиденция Мария", Энгельс</p>
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1035.9020836875374!2d46.04775197127293!3d51.476149342464794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1712668488373!5m2!1sru!2sru"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="bg-white py-16 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">Подтвердите своё присутствие</h3>
+      <div class="overflow-hidden rounded-xl shadow-md">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdL82Vsv1C4K1aWKsUxakW8PRlBNCf5xyFFBE6j0kZU7EHEWQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-green-100 text-center text-sm py-6 text-green-700">
+    С любовью, Александр & Светлана ❤️ 2025
+  </footer>
+
+  <script>
+    const countdown = () => {
+      const countDate = new Date("August 30, 2025 16:00:00").getTime();
+      const now = new Date().getTime();
+      const gap = countDate - now;
+
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+
+      const textDay = Math.floor(gap / day);
+      const textHour = Math.floor((gap % day) / hour);
+      const textMinute = Math.floor((gap % hour) / minute);
+      const textSecond = Math.floor((gap % minute) / second);
+
+      document.getElementById("countdown").innerText =
+        `${textDay} дн. ${textHour} ч. ${textMinute} мин. ${textSecond} сек.`;
+    };
+    setInterval(countdown, 1000);
+  </script>
+
+</body>
+</html>
