@@ -6,6 +6,7 @@
   <title>Свадебное приглашение</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Playfair Display', serif;
@@ -99,59 +100,47 @@
     </div>
   </div>
   
-  <section class="bg-green-50 text-center py-20 text-gray-800">
-    <div class="max-w-4xl mx-auto px-4">
-      <!-- Линии сверху -->
-      <div class="mb-8">
+   <!-- Главный блок -->
+   <section class="bg-green-50 text-center py-16 sm:py-20 px-4" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-6">
         <div class="h-0.5 w-12 mx-auto bg-green-700 mb-1"></div>
         <div class="h-0.5 w-12 mx-auto bg-green-700 mb-1"></div>
         <div class="h-0.5 w-12 mx-auto bg-green-700"></div>
       </div>
-  
-      <!-- Имена -->
-      <h1 class="text-4xl md:text-5xl font-serif tracking-wide mb-4">АЛЕКСАНДР & СВЕТЛАНА</h1>
-  
-      <!-- Дата -->
-      <p class="text-xl md:text-2xl mb-6 font-light">30.08.2025</p>
-  
-      <!-- Подпись -->
-      <p class="text-lg md:text-xl text-green-700 uppercase tracking-widest">Приглашение на свадьбу</p>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif tracking-wide mb-4">АЛЕКСАНДР & СВЕТЛАНА</h1>
+      <p class="text-lg sm:text-xl md:text-2xl mb-4 font-light">30.08.2025</p>
+      <p class="text-sm sm:text-lg text-green-700 uppercase tracking-widest">Приглашение на свадьбу</p>
     </div>
   </section>
-  
-  <section class="w-full h-[500px] overflow-hidden">
-    <img src="images/first.jpg" 
-         alt="Мы" 
-         class="w-full h-full object-cover object-center">
+
+  <!-- Большое фоновое изображение -->
+  <section class="w-full h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden" data-aos="zoom-in">
+    <img src="images/first.jpg" alt="Мы" class="w-full h-full object-cover object-center transition-all duration-700 hover:scale-105">
   </section>
 
-  <section class="bg-[#f9f8f6] py-20 px-4 text-gray-800 font-serif">
+  <!-- История -->
+  <section class="bg-[#f9f8f6] py-16 px-4" data-aos="fade-up">
     <div class="max-w-6xl mx-auto">
-      
-      <!-- Верхняя фотография и декоративная рамка -->
-      <div class="p-2 mb-16 h-[500px]">
-        <div>
-          <img src="images/second.jpg" alt="Наша история" class="w-full object-cover" style="max-height: 500px;">
-        </div>
+
+      <!-- Большое фото -->
+      <div class="p-2 mb-12 sm:mb-16 h-[250px] sm:h-[350px] md:h-[500px]" data-aos="fade-up">
+        <img src="images/second.jpg" alt="Наша история" class="w-full h-full object-cover rounded-xl shadow-md">
       </div>
-  
-      <!-- Нижний блок с фото + текстом -->
-      <div class="grid md:grid-cols-2 gap-12 items-start">
-        <!-- Фото с рамкой -->
-        <div class=" p-2 w-full max-w-md mx-auto">
-          <div>
-            <img src="images/third.jpg" alt="Фото пары" class="w-full h-auto object-cover">
-          </div>
+
+      <!-- Фото и текст -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Фото -->
+        <div class="p-2 w-full max-w-xs sm:max-w-sm mx-auto" data-aos="zoom-in">
+          <img src="images/third.jpg" alt="Фото пары" class="w-full h-auto object-cover rounded-xl shadow-md">
         </div>
-  
+
         <!-- Текст -->
-        <div class="text-center md:text-left">
-          <h2 class="text-2xl md:text-3xl mb-4 tracking-wide uppercase">История нашей любви...</h2>
-          <div class="w-8 h-8 mb-6 mx-auto md:mx-0">
-            <!-- Сюда можно вставить SVG-иконку сердца -->
-            ❤️
-          </div>
-          <p class="text-base leading-relaxed">
+        <div class="text-center md:text-left" data-aos="fade-left">
+          <h2 class="text-2xl sm:text-3xl mb-4 tracking-wide uppercase">История нашей любви...</h2>
+          <div class="text-3xl mb-6">❤️</div>
+          <p class="text-base sm:text-lg leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quam magnam sapiente quae dolorum corporis amet ea consequuntur? Saepe numquam ad quo cum similique? Illo incidunt exercitationem nihil magni numquam.
           </p>
         </div>
@@ -206,7 +195,13 @@
     С любовью, Александр & Светлана ❤️ 2025
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
     const countdown = () => {
       const countDate = new Date("August 30, 2025 16:00:00").getTime();
       const now = new Date().getTime();
