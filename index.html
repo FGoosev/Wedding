@@ -57,18 +57,14 @@
     .-translate-y-8 {
       transform: translateY(-32px);
     }
-    @keyframes spin-slow {
-    0% {
-      transform: rotate(0deg);
+    @keyframes fadeIn {
+    from {
+      opacity: 0;
     }
-    100% {
-      transform: rotate(360deg);
+    to {
+      opacity: 1;
     }
-    }
-
-    .animate-spin-slow {
-      animation: spin-slow 6s linear infinite;
-    }
+  }
     @keyframes shimmer {
       0% { background-position: 0 0; }
       100% { background-position: 100% 100%; }
@@ -207,7 +203,10 @@
         <div class="stroke" style="background: linear-gradient(135deg, rgba(255,203,219,1) 0%, rgba(160,130,100,0.2) 100%);"></div>
         <div class="stroke ml-12" style="background: linear-gradient(135deg, rgba(247,143,167,1) 0%, rgba(160,130,100,0.2) 100%);"></div>
       </div>
-      <p class="text-lg mb-10" style="margin-top: 45px;">Также, для вашего удобства и в соответствии со стилистикой свадьбы, будем рады, если вы придете в белых кроссовках 👟</p>
+      <p class="text-lg mb-10" style="margin-top: 45px;">
+        Также, для вашего удобства и в соответствии со стилистикой свадьбы, будем рады, если вы придете в 
+        <span class="underline text-2xl transition-all text-green-600 hover:text-green-600 hover:underline-offset-4 ">БЕЛЫХ КРОССОВКАХ 👟</span>
+      </p>
     </div>
   </section>
   <section id="rsvp" class="bg-white py-16 px-4">
