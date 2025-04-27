@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Playfair Display', serif;
@@ -57,7 +57,18 @@
     .-translate-y-8 {
       transform: translateY(-32px);
     }
+    @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+    }
 
+    .animate-spin-slow {
+      animation: spin-slow 6s linear infinite;
+    }
     @keyframes shimmer {
       0% { background-position: 0 0; }
       100% { background-position: 100% 100%; }
@@ -71,6 +82,7 @@
       opacity: 1;
       transform: translateY(0);
     }
+    
   }
 
   .fade-in {
@@ -102,13 +114,7 @@
   </div>
   
    <section class="bg-green-50 text-center py-16 sm:py-20 px-4" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto">
-      <div class="mb-6">
-        <div class="h-0.5 w-12 mx-auto bg-green-700 mb-1"></div>
-        <div class="h-0.5 w-12 mx-auto bg-green-700 mb-1"></div>
-        <div class="h-0.5 w-12 mx-auto bg-green-700"></div>
-      </div>
-
+    <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif tracking-wide mb-4">АЛЕКСАНДР & СВЕТЛАНА</h1>
       <p class="text-lg sm:text-xl md:text-2xl mb-4 font-light">30.08.2025</p>
       <p class="text-sm sm:text-lg text-green-700 uppercase tracking-widest">Приглашение на свадьбу</p>
@@ -116,51 +122,51 @@
   </section>
 
   <section class="w-full h-[300px] sm:h-[400px] md:h-[700px] overflow-hidden" data-aos="zoom-in">
-    <img src="images/second.jpg" alt="Мы" class="w-full h-full object-cover object-center transition-all duration-700 hover:scale-105">
+    <img src="https://i.imgur.com/bzWGjf2.jpg" alt="Мы" class="w-full h-full object-cover object-center transition-all duration-700 hover:scale-105">
   </section>
 
   <section class="bg-[#f9f8f6] py-16 px-4" data-aos="fade-up">
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
         <div class="p-2 w-full max-w-xs sm:max-w-sm mx-auto transform rotate-[-3deg]" data-aos="zoom-in">
-          <img src="images/third.jpg" alt="Фото пары" class="w-full h-auto object-cover rounded-xl shadow-md">
+          <img src="https://imgur.com/bCILJaJ.jpg" alt="Фото пары" class="w-full h-auto object-cover rounded-xl shadow-md">
         </div>
   
         <div class="text-center md:text-left" data-aos="fade-left">
-          <h2 class="text-2xl sm:text-3xl mb-4 tracking-wide uppercase" style="font-family: 'Dancing Script', cursive;"">Когда мы познакомились...❤️</h2>
-          <p class="text-base sm:text-lg leading-relaxed" style="font-family: 'Dancing Script', cursive;">
-            Судьба привела нас друг к другу 1 октября 2023 года. С того момента мы стали неразлучны, и каждый день вместе — это маленькое чудо, которое продолжается в сердце, наполняя его любовью и счастьем.
+          <h2 class="text-2xl sm:text-3xl mb-4 tracking-wide uppercase" style="font-family: 'Sacramento', cursive;">Когда мы познакомились...❤️</h2>
+          <p class="text-base sm:text-lg leading-relaxed" style="font-family: 'Sacramento', cursive;">
+            1 октября 2023 года наши сердца встретились. С каждым днём, проведённым вместе, мы ощущаем, как любовь растёт, как каждое мгновение становится драгоценным, а счастье наполняет наши души и согревает сердца.
           </p>
         </div>
       </div>
   
       <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
         <div class="text-center md:text-left order-2 md:order-1" data-aos="fade-right">
-          <p class="text-2xl sm:text-3xl font-serif leading-relaxed mb-4" style="font-family: 'Dancing Script', cursive;">
-            14 февраля 2025 года мы решили пожениться 💍
+          <p class="text-2xl sm:text-3xl font-serif leading-relaxed mb-4" style="font-family: 'Sacramento', cursive;">
+            14 февраля 2025 года мы приняли важное решение — связать наши судьбы 💍
           </p>
-          <p class="text-base sm:text-lg leading-relaxed" style="font-family: 'Dancing Script', cursive;">
-            Этот день стал важной вехой в нашем пути. Мы решили связать наши судьбы навсегда и начать новый этап жизни, наполненный любовью, счастьем и множеством совместных моментов.
+          <p class="text-base sm:text-lg leading-relaxed" style="font-family: 'Sacramento', cursive;">
+            Этот день открыл перед нами новую главу. Мы решили начать путь, наполненный любовью, счастьем и множеством совместных моментов.
           </p>
         </div>
       
         <div class="p-2 w-full max-w-xs sm:max-w-sm mx-auto transform rotate-[3deg] order-1 md:order-2" data-aos="zoom-in">
-          <img src="images/third.jpg" alt="Совместное фото" class="w-full h-auto object-cover rounded-xl shadow-md">
+          <img src="https://imgur.com/M6TjLYy.jpg" alt="Совместное фото" class="w-full h-auto object-cover rounded-xl shadow-md">
         </div>
       </div>
     
       <div class="max-w-6xl mx-auto mt-16">
         <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
           <div class="p-2 w-full max-w-xs sm:max-w-sm mx-auto transform rotate-[3deg]" data-aos="zoom-in">
-            <img src="images/third.jpg" alt="Дата свадьбы" class="w-full h-auto object-cover rounded-xl shadow-md">
+            <img src="https://imgur.com/IptFRNw.jpg" alt="Дата свадьбы" class="w-full h-auto object-cover rounded-xl shadow-md">
           </div>
       
           <div class="text-center md:text-left" data-aos="fade-left">
-            <h2 class="text-2xl sm:text-3xl mb-4 tracking-wide uppercase font-serif" style="font-family: 'Dancing Script', cursive;">
+            <h2 class="text-2xl sm:text-3xl mb-4 tracking-wide uppercase font-serif" style="font-family: 'Sacramento', cursive;">
               Наша свадьба — 30 августа 2025
             </h2>
-            <p class="text-base sm:text-lg leading-relaxed" style="font-family: 'Dancing Script', cursive;">
-              Этот день станет важной вехой в нашем пути. Мы обменяемся клятвами и начнем новую главу нашей жизни. Будем рады, если вы будете рядом в этот важный момент, чтобы разделить с нами счастье и радость!
+            <p class="text-base sm:text-lg leading-relaxed" style="font-family: 'Sacramento', cursive;">
+              Этот день станет важным этапом в нашем путешествии. Мы скажем друг другу главные слова и откроем новую страницу нашей жизни. Будем бесконечно счастливы, если вы будете рядом, разделив с нами этот важный момент и наше счастье!
             </p>
           </div>
         </div>
@@ -245,7 +251,7 @@
   
         <!-- Предпочитаемое питание -->
         <div>
-          <label for="meal" class="block text-left mb-2 font-semibold">Предпочитаемое питание</label>
+          <label for="meal" class="block text-left mb-2 font-semibold">Есть ли у вас аллергия на какие-либо продукты питания?</label>
           <input type="text" id="meal" name="meal" class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-400" placeholder="Например, вегетарианское, безглютеновое...">
         </div>
   
@@ -385,6 +391,16 @@
         alert('Ошибка отправки. Попробуйте снова.');
       }
     });
+    const yinYang = document.getElementById('yin-yang');
+    let angle = 0;
+
+    function rotateYinYang() {
+      angle += 1;
+      yinYang.style.transform = `rotate(${angle}deg)`;
+      requestAnimationFrame(rotateYinYang);
+    }
+
+    rotateYinYang(); // Начинаем вращение
   </script>
 
 </body>
