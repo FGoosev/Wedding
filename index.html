@@ -278,6 +278,7 @@
       e.preventDefault();
 
       const name = form.name.value.trim();
+      const meal = form.meal.value.trim();
       const message = form.message.value.trim();
 
       // Собираем выбранные напитки
@@ -291,6 +292,7 @@
 
   👤 Имя: ${name}
   🍷 Алкоголь: ${alcohols || 'Не выбрано'}
+  🤧 Аллергии ${meal || 'Нет'}
   ✍️ Пожелание: ${message || 'Нет'}
       `;
 
