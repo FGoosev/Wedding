@@ -97,27 +97,6 @@
   </style>
 </head>
 <body class="bg-[#f8faf8] text-green-900">
-  <audio id="weddingAudio" loop autoplay muted>
-    <source src="images/back.mp3" type="audio/mpeg">
-    Ваш браузер не поддерживает аудио.
-  </audio>
-
-  <!-- Всплывающее уведомление о музыке -->
-  <div id="musicModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-2xl p-8 shadow-2xl text-center max-w-md w-full fade-in">
-      <h2 class="text-2xl font-bold text-gray-800 mb-4">Включить музыку? 🎶</h2>
-      <p class="text-gray-600 mb-6">Мы подобрали красивую мелодию, чтобы создать настроение.</p>
-      <div class="flex justify-center gap-4">
-        <button id="startMusicBtn" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg text-md transition-all shadow">
-          Включить
-        </button>
-        <button id="skipMusicBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-5 py-2 rounded-lg text-md transition-all shadow">
-          Нет, спасибо
-        </button>
-      </div>
-    </div>
-  </div>
-  
    <section class="bg-green-50 text-center py-16 sm:py-20 px-4" data-aos="fade-up">
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif tracking-wide mb-4">АЛЕКСАНДР & СВЕТЛАНА</h1>
@@ -289,61 +268,6 @@
     AOS.init({
       duration: 1000,
       once: true,
-    });
-
-    const countdown = () => {
-      const countDate = new Date("August 30, 2025 16:00:00").getTime();
-      const now = new Date().getTime();
-      const gap = countDate - now;
-
-      const second = 1000;
-      const minute = second * 60;
-      const hour = minute * 60;
-      const day = hour * 24;
-
-      const textDay = Math.floor(gap / day);
-      const textHour = Math.floor((gap % day) / hour);
-      const textMinute = Math.floor((gap % hour) / minute);
-      const textSecond = Math.floor((gap % minute) / second);
-
-      document.getElementById("countdown").innerText =
-        `${textDay} дн. ${textHour} ч. ${textMinute} мин. ${textSecond} сек.`;
-    };
-    setInterval(countdown, 1000);
-
-    const audio = document.getElementById('weddingAudio');
-    const musicModal = document.getElementById('musicModal');
-    const startMusicBtn = document.getElementById('startMusicBtn');
-    const skipMusicBtn = document.getElementById('skipMusicBtn');
-
-    // Попытка тихого автозапуска (для Safari / Chrome)
-    window.addEventListener('DOMContentLoaded', () => {
-      audio.muted = true;
-      audio.play().catch(() => {
-        // Возможно, браузер блокирует автостарт
-        console.log("Автостарт (muted) не сработал.");
-      });
-    });
-
-    const hideModal = () => {
-      musicModal.classList.add('opacity-0');
-      setTimeout(() => {
-        musicModal.classList.add('hidden');
-      }, 300);
-    };
-
-    startMusicBtn.addEventListener('click', () => {
-      audio.muted = false;
-      audio.play().then(() => {
-        hideModal();
-      }).catch((err) => {
-        console.log('Ошибка воспроизведения:', err);
-      });
-    });
-
-    skipMusicBtn.addEventListener('click', () => {
-      audio.pause();
-      hideModal();
     });
     const form = document.getElementById('rsvp-form');
     const modal = document.getElementById('thank-you-modal');
